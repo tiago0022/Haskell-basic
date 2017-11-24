@@ -1,9 +1,9 @@
 -- Checks if a number is a prime number
-isPrime :: Int -> Bool
+primo :: Int -> Bool
 -- By definition, 0 and 1 are not primes
-isPrime 1 = False
-isPrime 0 = False
-isPrime n
+primo 1 = False
+primo 0 = False
+primo n
  | n `mod` 2 == 0 = False           -- even numbers are not primes
  | factors n == [1,n] = True -- if the only factor is 1 and n, it's prime
  | otherwise = False
