@@ -28,3 +28,14 @@ removeLast :: [Int] -> [Int]
 removeLast [] = []
 removeLast [_] = []
 removeLast (e:list) = (e:(removeLast list))
+
+-- Calculates the number of elements in a list
+size :: [Int] -> Int
+size [] = 0
+size (e:list) = 1 + size list
+
+-- Returns the list with fewer elements
+minLength :: [Int] -> [Int] -> [Int]
+minLength l1 l2
+ | (size l1) <= (size l2) = l1
+ | otherwise = l2
